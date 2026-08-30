@@ -1,0 +1,26 @@
+# Copy this file to config.yaml and fill in your details.
+# config.yaml is gitignored — never commit real API keys.
+
+server:
+  host: "0.0.0.0"    # listen on all interfaces so HoloLens on the LAN can reach it
+  port: 8765
+
+# Which provider to use — must match a key under `providers:` below.
+provider: "claude"
+
+providers:
+  claude:
+    api_key: "YOUR_ANTHROPIC_API_KEY"
+    model: "claude-sonnet-4-6"
+
+  openai:
+    api_key: "YOUR_OPENAI_API_KEY"
+    model: "gpt-4o"
+
+  gemini:
+    api_key: "YOUR_GEMINI_API_KEY"
+    model: "gemini-2.0-flash"
+
+  hermes:
+    gateway_url: "http://localhost:PORT"   # your Hermes Agent gateway
+    api_key: null
